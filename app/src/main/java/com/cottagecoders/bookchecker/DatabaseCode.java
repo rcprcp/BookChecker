@@ -1,12 +1,12 @@
 package com.cottagecoders.bookchecker;
 
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+
+import java.util.ArrayList;
 
 public class DatabaseCode extends SQLiteOpenHelper {
 
@@ -23,7 +23,6 @@ public class DatabaseCode extends SQLiteOpenHelper {
 
 	public DatabaseCode(Context context) {
 		super(context, DB_NAME, null, VERSION);
-		return;
 	}
 
 	/**
@@ -158,10 +157,15 @@ public class DatabaseCode extends SQLiteOpenHelper {
 		} catch (Exception e) {
 			Log.d(TAG, "insertIntoItemTable(): sql failed " + stmt + " " + e);
 		}
-		c.moveToFirst();
-		int theId = c.getInt(0);
-		c.close();
-		return theId;
+
+		if (c == null) {
+			return -1;
+		} else {
+			c.moveToFirst();
+			int theId = c.getInt(0);
+			c.close();
+			return theId;
+		}
 	}
 
 	public void deleteFromItems(BookRec item) {
@@ -176,15 +180,13 @@ public class DatabaseCode extends SQLiteOpenHelper {
 			db = getWritableDatabase();
 		}
 
-		// TODO: fix this. must return arraylist - there can be dupe UPCs.
-
 		String stmt = "SELECT id, upc, isbn10, title, subTitle, author, "
 				+ " publisher, published, listPrice, "
 				+ " retailPrice, currency, imagePath, condition";
 		stmt += " FROM " + T_BOOKS + " WHERE id = " + id;
 
-		ArrayList<BookRec> books = new ArrayList<BookRec>();
-		Cursor tt = null;
+		ArrayList<BookRec> books = new ArrayList<>();
+		Cursor tt;
 		try {
 			tt = db.rawQuery(stmt, null);
 		} catch (Exception e) {
@@ -215,7 +217,7 @@ public class DatabaseCode extends SQLiteOpenHelper {
 		}
 
 		// set up return value.
-		ArrayList<BookRec> books = new ArrayList<BookRec>();
+		ArrayList<BookRec> books = new ArrayList<>();
 		String stmt = "SELECT id, upc, isbn10, title, subTitle, "
 				+ "author, publisher, published, listPrice, "
 				+ "retailPrice, currency, imagePath, condition";
@@ -254,7 +256,7 @@ public class DatabaseCode extends SQLiteOpenHelper {
 		String stmt = "SELECT count(price) FROM " + T_PRICES + " WHERE id = "
 				+ id;
 
-		Cursor c = null;
+		Cursor c;
 		try {
 			c = db.rawQuery(stmt, null);
 		} catch (Exception e) {
@@ -282,8 +284,8 @@ public class DatabaseCode extends SQLiteOpenHelper {
 				+ T_PRICES + " WHERE id = " + id + "  " + orderBy;
 
 		// set up return value.
-		ArrayList<PriceRec> prices = new ArrayList<PriceRec>();
-		Cursor c = null;
+		ArrayList<PriceRec> prices = new ArrayList<>();
+		Cursor c;
 		try {
 			c = db.rawQuery(stmt, null);
 		} catch (Exception e) {
