@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <drawable name="red">#7f00</drawable>
+    <drawable name="blue">#770000ff</drawable>
+    <drawable name="green">#7700ff00</drawable>
+    <drawable name="yellow">#77ffff00</drawable>
+    <drawable name="screen_background_black">#ff000000</drawable>
+    <drawable name="translucent_background">#e0000000</drawable>
+    <drawable name="transparent_background">#00000000</drawable>
+    <drawable name="grey">#ff555555</drawable>
+
+    <!-- 00 is full transparent?  and ff is opaque? nothing in the opacity is full opaque?? -->
+    <color name="Red">#ff0000</color>
+    <color name="Blue">#0000ff</color>
+    <color name="Green">#00ff00</color>
+    <color name="Yellow">#ffff00</color>
+    <color name="SpringGreen">#00ff7f</color>
+    <color name="White">#ffffff</color>
+    <color name="Black">#000000</color>
+    <color name="LightBlue">#60dfe5</color>
+    <color name="DarkBlue">#0000ff</color>
+    <color name="DarkGray">#aaaaaa</color>
+    <color name="LightGray">#333333</color>
+
+</resources>

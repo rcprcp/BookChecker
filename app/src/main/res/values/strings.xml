@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Book Checker</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="scan">Scan</string>
+    <string name="lookup">Lookup</string>
+    <string name="view">View</string>
+    <string name="byName">Name</string>
+    <string name="byAuthor">Author</string>
+    <string name="byPublisher">Publisher</string>
+    <string name="byISBN">ISBN/UPC</string>
+    <string name="viewItemList">View Item List</string>
+    <string name="viewItemDetails">View Item Details</string>
+    <string name="itemDetails">Details</string>
+    <string name="prices">Prices</string>
+    <string name="numRec">Num Recs</string>
+
+</resources>
