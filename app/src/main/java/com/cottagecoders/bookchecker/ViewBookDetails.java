@@ -203,7 +203,7 @@ public class ViewBookDetails extends Activity {
 
 		// do the math for the top lines.
 		double sumOfPrices = 0;
-		double meanPrice = 0;
+		double meanPrice;
 		double medianPrice = 0;
 		if (numRecords > 2) {
 			medianPrice = prices.get(numRecords / 2).getTotalPrice();

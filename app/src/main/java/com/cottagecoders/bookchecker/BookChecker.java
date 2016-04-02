@@ -128,7 +128,7 @@ public class BookChecker extends Activity {
 	private void callBarcodeScanner() {
 		IntentIntegrator integrator = new IntentIntegrator(BookChecker.this);
 		integrator.addExtra("PROMPT_MESSAGE",
-				"Scan the ISBN barcode - press Back to stop scanning");
+				"Scan the ISBN barcode or press Back when done");
 		integrator.addExtra("RESULT_DISPLAY_DURATION_MS", "1L");
 		integrator.initiateScan(Collections.singleton("EAN_13"));
 	}
@@ -231,7 +231,7 @@ public class BookChecker extends Activity {
 		int totalItems = 0;
 		try {
 			totalItems = json.getInt("totalItems");
-		} catch (JSONException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			Log.d(TAG, "totalitems exception " + e);
 		}
@@ -249,9 +249,10 @@ public class BookChecker extends Activity {
 		JSONArray j2 = null;
 		try {
 			j2 = json.getJSONArray("items");
-		} catch (JSONException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			Log.d(TAG, "items array exception " + e);
+			return null;
 		}
 
 		Log.d(TAG, "j2 length " + j2.length());
