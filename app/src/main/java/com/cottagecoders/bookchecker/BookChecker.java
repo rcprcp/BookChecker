@@ -196,22 +196,12 @@ public class BookChecker extends Activity {
 	private BookRec getGoogleInfo(String upc) {
 		String url = "https://www.googleapis.com/books/v1/volumes?q=isbn:"
 				+ upc;
-		// don't seem to need this appended to the url...
-		// url += "&key=" + googleApiKey;
 
 		Log.d(TAG, "url: " + url);
 
 		String output = null;
 		try {
 			output = myHttpGET(url);
-			/*
-			 * DefaultHttpClient httpClient = new DefaultHttpClient(); HttpGet
-			 * httpGet = new HttpGet(url);
-			 * 
-			 * HttpResponse httpResponse = httpClient.execute(httpGet);
-			 * HttpEntity httpEntity = httpResponse.getEntity(); output =
-			 * EntityUtils.toString(httpEntity);
-			 */
 		} catch (Exception e) {
 			Log.d(TAG, "getGoogleInfo: http fail... " + e);
 		}

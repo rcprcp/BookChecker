@@ -2,25 +2,25 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\bob\StudioProjects\BookChecker\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jar="/home/bob/AndroidStudioProjects/BookChecker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
         jumboMode="false"
-        revision="22.0.1"
-        sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="C:\Users\bob\StudioProjects\BookChecker\app\build\intermediates\pre-dexed\debug\classes-7601f14cb050f4e0babbaad2c329ec8bc02e4269.jar" />
+        revision="23.0.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/home/bob/AndroidStudioProjects/BookChecker/app/build/intermediates/pre-dexed/debug/classes-471704b32a2ce69191d70e689602bf12ef1c82b1.jar" />
     </item>
     <item
-        jar="C:\Users\bob\StudioProjects\BookChecker\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jar="/home/bob/AndroidStudioProjects/BookChecker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
         jumboMode="false"
-        revision="22.0.1"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="C:\Users\bob\StudioProjects\BookChecker\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-63b9a26c43116a578e6148a350603618fe75a709.jar" />
+        revision="23.0.2"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/home/bob/AndroidStudioProjects/BookChecker/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.1-1918af2eec5754694a085835dad944167b72e3c5.jar" />
     </item>
     <item
-        jar="C:\Users\bob\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jar="/home/bob/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
         jumboMode="false"
-        revision="22.0.1"
-        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="C:\Users\bob\StudioProjects\BookChecker\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-168b3456c854ec7e9e8bba9c100467d0271164ca.jar" />
+        revision="23.0.2"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/home/bob/AndroidStudioProjects/BookChecker/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.1-4cf3b9c5109644e95d5efba409e86958f649a9e5.jar" />
     </item>
 
 </items>
